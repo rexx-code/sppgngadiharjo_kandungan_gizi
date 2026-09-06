@@ -371,13 +371,12 @@ async function loadToday() {
        ------------------------------------------------------- */
 
     const values = [
-      ["Energi", n.energi, "kcal"],
-      ["Protein", n.protein, "g"],
-      ["Karbohidrat", n.karbohidrat, "g"],
-      ["Lemak", n.lemak, "g"],
-      ["Serat", n.serat, "g"],
-      ["Natrium", n.natrium, "mg"]
-    ];
+  ["Energi", n.energi, "kcal"],
+  ["Protein", n.protein, "g"],
+  ["Lemak", n.lemak, "g"],
+  ["Karbohidrat", n.karbohidrat, "g"],
+  ["Serat", n.serat, "g"]
+];
 
 
     const nutritionGrid = $("nutritionGrid");
