@@ -1982,3 +1982,105 @@ a {
     display: none;
   }
 }
+
+/* =========================================================
+   LOKASI SPPG
+========================================================= */
+
+.location-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid #e9eef5;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.location-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef5ff;
+  color: #0d6efd;
+  border-radius: 14px;
+  font-size: 24px;
+}
+
+.location-content {
+  flex: 1;
+}
+
+.location-content .info-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #0d6efd;
+}
+
+.location-content h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.location-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+.location-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 17px;
+  border-radius: 12px;
+  background: #0d6efd;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.location-button:hover {
+  background: #0b5ed7;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.location-button i {
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  .location-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 18px;
+  }
+
+  .location-content {
+    width: calc(100% - 70px);
+  }
+
+  .location-button {
+    width: 100%;
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+}
