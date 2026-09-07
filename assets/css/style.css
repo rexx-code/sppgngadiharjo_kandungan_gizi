@@ -1982,207 +1982,131 @@ a {
     display: none;
   }
 }
-
 /* =========================================================
-   LOKASI SPPG
+   SARAN & MASUKAN + LOKASI SPPG
+   STYLE MENYESUAIKAN ORGANoleptik
 ========================================================= */
 
+.feedback-card,
 .location-card {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 22px;
-  margin-top: 20px;
-  background: #fff;
-  border: 1px solid #e9eef5;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  gap: 14px;
+  padding: 14px 16px;
+  margin-top: 14px;
+  background: #ffffff;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.035);
 }
 
+/* ICON */
+
+.feedback-icon,
 .location-icon {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 12px;
   background: #eef5ff;
   color: #0d6efd;
-  border-radius: 14px;
-  font-size: 24px;
+  font-size: 19px;
 }
 
+/* CONTENT */
+
+.feedback-content,
 .location-content {
   flex: 1;
+  min-width: 0;
 }
 
+.feedback-content .info-label,
 .location-content .info-label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 11px;
+  margin-bottom: 2px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: .8px;
   color: #0d6efd;
 }
 
+.feedback-content h3,
 .location-content h3 {
-  margin: 0 0 5px;
-  font-size: 17px;
+  margin: 0 0 2px;
+  font-size: 14px;
+  line-height: 1.35;
   font-weight: 700;
-  color: #1f2937;
+  color: #20262e;
 }
 
+.feedback-content p,
 .location-content p {
   margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 11px;
+  line-height: 1.45;
   color: #6b7280;
 }
 
+/* BUTTON */
+
+.feedback-button,
 .location-button {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 11px 17px;
-  border-radius: 12px;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 13px;
+  border: 0;
+  border-radius: 10px;
   background: #0d6efd;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
   white-space: nowrap;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
 
+.feedback-button:hover,
 .location-button:hover {
   background: #0b5ed7;
-  color: #fff;
+  color: #ffffff;
   transform: translateY(-1px);
 }
 
+.feedback-button i,
 .location-button i {
-  font-size: 14px;
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-
-  .location-card {
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 18px;
-  }
-
-  .location-content {
-    width: calc(100% - 70px);
-  }
-
-  .location-button {
-    width: 100%;
-    justify-content: center;
-    margin-top: 4px;
-  }
-
+  font-size: 12px;
 }
 
 /* =========================================================
-   SARAN & MASUKAN
+   MOBILE
 ========================================================= */
 
-.feedback-card {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 22px;
-  margin-top: 20px;
-  background: #fff;
-  border: 1px solid #e9eef5;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-}
-
-.feedback-icon {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eef5ff;
-  color: #0d6efd;
-  border-radius: 14px;
-  font-size: 24px;
-}
-
-.feedback-content {
-  flex: 1;
-}
-
-.feedback-content .info-label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #0d6efd;
-}
-
-.feedback-content h3 {
-  margin: 0 0 5px;
-  font-size: 17px;
-  font-weight: 700;
-  color: #1f2937;
-}
-
-.feedback-content p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #6b7280;
-}
-
-.feedback-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 11px 17px;
-  border-radius: 12px;
-  background: #0d6efd;
-  color: #fff;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-
-.feedback-button:hover {
-  background: #0b5ed7;
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-.feedback-button i {
-  font-size: 14px;
-}
-
-/* Mobile */
 @media (max-width: 576px) {
 
-  .feedback-card {
+  .feedback-card,
+  .location-card {
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 18px;
+    gap: 12px;
+    padding: 14px;
   }
 
-  .feedback-content {
-    width: calc(100% - 70px);
+  .feedback-content,
+  .location-content {
+    width: calc(100% - 54px);
   }
 
-  .feedback-button {
+  .feedback-button,
+  .location-button {
     width: 100%;
-    justify-content: center;
-    margin-top: 4px;
+    margin-top: 2px;
   }
 
 }
