@@ -1983,130 +1983,230 @@ a {
   }
 }
 /* =========================================================
-   SARAN & MASUKAN + LOKASI SPPG
-   STYLE MENYESUAIKAN ORGANoleptik
+   LOKASI SPPG + SARAN & MASUKAN
+   STYLE SAMA DENGAN ORGANOLEPTIK
 ========================================================= */
 
-.feedback-card,
-.location-card {
-  position: relative;
+.location-card,
+.feedback-card {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px 16px;
+  gap: 15px;
+  padding: 17px 18px;
   margin-top: 14px;
-  background: #ffffff;
-  border: 1px solid #e8edf3;
+
+  background:
+    linear-gradient(135deg, #f7faff 0%, #ffffff 100%);
+
+  border: 1px solid #dbe7f7;
   border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.035);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
 }
 
-/* ICON */
 
-.feedback-icon,
-.location-icon {
-  width: 42px;
-  height: 42px;
-  min-width: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* =========================================================
+   HOVER
+========================================================= */
+
+.location-card:hover,
+.feedback-card:hover {
+  transform: translateY(-2px);
+  border-color: #c4d8f5;
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.location-icon,
+.feedback-icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+
+  display: grid;
+  place-items: center;
+
   border-radius: 12px;
-  background: #eef5ff;
-  color: #0d6efd;
-  font-size: 19px;
+
+  background: var(--blue-100);
+  color: var(--primary);
+
+  font-size: .95rem;
+  font-weight: 800;
 }
 
-/* CONTENT */
 
-.feedback-content,
-.location-content {
-  flex: 1;
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.location-content,
+.feedback-content {
   min-width: 0;
+  flex: 1;
 }
 
-.feedback-content .info-label,
-.location-content .info-label {
+
+.location-content .info-label,
+.feedback-content .info-label {
   display: block;
-  margin-bottom: 2px;
-  font-size: 10px;
+  margin-bottom: 3px;
+
+  color: var(--primary);
+
+  font-size: .55rem;
   font-weight: 700;
-  letter-spacing: .8px;
-  color: #0d6efd;
+
+  letter-spacing: .11em;
 }
 
-.feedback-content h3,
-.location-content h3 {
-  margin: 0 0 2px;
-  font-size: 14px;
-  line-height: 1.35;
-  font-weight: 700;
-  color: #20262e;
-}
 
-.feedback-content p,
-.location-content p {
+.location-content h3,
+.feedback-content h3 {
   margin: 0;
-  font-size: 11px;
-  line-height: 1.45;
-  color: #6b7280;
+
+  color: var(--ink);
+
+  font-size: .78rem;
+  font-weight: 700;
+
+  line-height: 1.4;
 }
 
-/* BUTTON */
 
-.feedback-button,
-.location-button {
+.location-content p,
+.feedback-content p {
+  margin: 3px 0 0;
+
+  color: var(--muted);
+
+  font-size: .62rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.location-button,
+.feedback-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 7px;
+
+  flex-shrink: 0;
+
   padding: 9px 13px;
-  border: 0;
-  border-radius: 10px;
-  background: #0d6efd;
-  color: #ffffff;
+
+  color: #fff;
   text-decoration: none;
-  font-size: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--primary-dark)
+    );
+
+  border-radius: 10px;
+
+  font-size: .65rem;
   font-weight: 600;
-  white-space: nowrap;
+
+  box-shadow:
+    0 6px 16px rgba(11, 94, 215, .18);
+
   transition: all .2s ease;
 }
 
-.feedback-button:hover,
-.location-button:hover {
-  background: #0b5ed7;
-  color: #ffffff;
+
+.location-button:hover,
+.feedback-button:hover {
+  color: #fff;
   transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(11, 94, 215, .25);
 }
 
-.feedback-button i,
-.location-button i {
-  font-size: 12px;
+
+.location-button i,
+.feedback-button i {
+  font-size: .8rem;
+  line-height: 1;
 }
+
 
 /* =========================================================
    MOBILE
+   SAMA DENGAN ORGANOLEPTIK
 ========================================================= */
 
 @media (max-width: 576px) {
 
-  .feedback-card,
-  .location-card {
+  .location-card,
+  .feedback-card {
     align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 12px;
+    gap: 11px;
     padding: 14px;
   }
 
-  .feedback-content,
-  .location-content {
-    width: calc(100% - 54px);
+
+  .location-icon,
+  .feedback-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+
+    border-radius: 10px;
+
+    font-size: .8rem;
   }
 
-  .feedback-button,
-  .location-button {
-    width: 100%;
-    margin-top: 2px;
+
+  .location-content .info-label,
+  .feedback-content .info-label {
+    font-size: .5rem;
+  }
+
+
+  .location-content h3,
+  .feedback-content h3 {
+    font-size: .68rem;
+  }
+
+
+  .location-content p,
+  .feedback-content p {
+    font-size: .56rem;
+  }
+
+
+  .location-button,
+  .feedback-button {
+    align-self: center;
+
+    padding: 8px 10px;
+
+    font-size: .58rem;
+  }
+
+
+  .location-button i,
+  .feedback-button i {
+    display: none;
   }
 
 }
